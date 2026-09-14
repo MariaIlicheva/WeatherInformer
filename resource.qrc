@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>style.qss</file>
+        <file>img/changing.png</file>
+        <file>img/cloudy.png</file>
+        <file>img/foggy.png</file>
+        <file>img/rainy.png</file>
+        <file>img/snowy.png</file>
+        <file>img/stormy.png</file>
+        <file>img/sunny.png</file>
+        <file>img/windy.png</file>
+        <file>img/close.png</file>
+        <file>img/very_rainy.png</file>
+        <file>img/stormy_night.png</file>
+        <file>img/rainy_night.png</file>
+        <file>img/snowy_night.png</file>
+        <file>img/clear_night.png</file>
+        <file>img/foggy_night.png</file>
+    </qresource>
+</RCC>

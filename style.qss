@@ -1,0 +1,126 @@
+* {
+    font-family: "SF Pro Text", "Helvetica Neue", "Segoe UI", sans-serif;
+}
+
+QMainWindow,
+QWidget#centralwidget,
+QWidget#week_page,
+QWidget#day_page {
+    background-color: #15121e;
+}
+
+QLineEdit#searchInput {
+    background-color: #211c30;
+    border: 1px solid #332c46;
+    border-radius: 14px;
+    padding: 6px 16px;
+    color: #f2f0f7;
+    font-size: 14px;
+    selection-background-color: #6c5ea8;
+}
+
+QLineEdit#searchInput:focus {
+    border: 1px solid #8571c9;
+}
+
+QTableWidget#weekTable,
+QTableWidget#hourTable {
+    background-color: #211c30;
+    border: 1px solid #332c46;
+    border-radius: 16px;
+    gridline-color: transparent;
+    color: #f2f0f7;
+    font-size: 13px;
+    outline: none;
+    padding: 4px;
+}
+
+QTableWidget#weekTable::item,
+QTableWidget#hourTable::item {
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+}
+
+QTableWidget#weekTable::item:hover,
+QTableWidget#hourTable::item:hover {
+    background-color: #322a49;
+}
+
+QTableWidget#weekTable::item:selected,
+QTableWidget#hourTable::item:selected {
+    background-color: transparent;
+    color: #f2f0f7;
+}
+
+QHeaderView::section {
+    background-color: #211c30;
+    color: #8f87a3;
+    border: none;
+    border-bottom: 1px solid #332c46;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+QTableCornerButton::section {
+    background-color: #211c30;
+    border: none;
+}
+
+QPushButton#backButton {
+    background-color: #2c2540;
+    color: #b6a4e8;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+QPushButton#backButton:hover {
+    background-color: #3a3253;
+}
+
+QPushButton#backButton:pressed {
+    background-color: #262038;
+}
+
+QLabel#dayTitleLabel {
+    color: #f2f0f7;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+QLabel#cityName {
+    color: #b6a4e8;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QScrollBar:horizontal,
+QScrollBar:vertical {
+    background: transparent;
+    height: 8px;
+    width: 8px;
+    margin: 0px;
+}
+
+QScrollBar::handle {
+    background: #3a324f;
+    border-radius: 4px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+    width: 0px;
+    height: 0px;
+    border: none;
+    background: none;
+}
+
+QScrollBar::add-page, QScrollBar::sub-page {
+    background: none;
+}
