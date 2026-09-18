@@ -1,0 +1,45 @@
+name: Windows build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.7.*'
+          host: 'windows'
+          target: 'desktop'
+          arch: 'win64_msvc2019_64'
+
+      - name: Set up MSVC environment
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
+      - name: Build
+        shell: cmd
+        run: |
+          qmake WeatherInformer.pro CONFIG+=release
+          nmake
+
+      - name: Bundle Qt dependencies
+        shell: cmd
+        run: |
+          mkdir dist
+          copy release\WeatherInformer.exe dist\
+          windeployqt --release dist\WeatherInformer.exe
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WeatherInformer-windows
+          path: dist
